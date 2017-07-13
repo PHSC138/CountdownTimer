@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_timer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="phsc.countdown.addTimer">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <TextView
+            android:text="Timer Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name"
+            android:textSize="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:layout_weight="0.11" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/et_name"
+            android:hint="Enter Timer Name"
+            android:textAlignment="center"
+            android:layout_below="@+id/tv_name"
+            android:layout_centerHorizontal="true"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textColor="@android:color/black"
+            android:layout_weight=".1"
+            android:backgroundTint="@android:color/holo_red_dark"/>
+
+        <TextView
+            android:id="@+id/tv_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Save To"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="41dp"
+            android:text="Enter Date"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/et_date"
+            android:hint="mm/dd/yyyy"
+            android:textAlignment="center"
+            android:layout_below="@+id/tv_day"
+            android:layout_alignStart="@+id/et_name"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textColor="@android:color/black"
+            android:layout_weight=".1"
+            android:backgroundTint="@android:color/holo_red_dark"/>
+
+        <TextView
+            android:id="@+id/tv_hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="0.11"
+            android:text="Enter Time"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/et_time"
+            android:hint="hh:mm:ss"
+            android:textAlignment="center"
+            android:layout_alignStart="@+id/et_date"
+            android:layout_below="@+id/tv_hour"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textColor="@android:color/black"
+            android:layout_weight=".1"
+            android:backgroundTint="@android:color/holo_red_dark"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.36"/>
+
+            <TextView
+                android:id="@+id/tv_dst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.36"
+                android:text="DST"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"/>
+
+            <ToggleButton
+                android:id="@+id/tb_dst"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColorLink="@android:color/holo_red_dark"/>
+
+        </LinearLayout>
+
+        <Button
+            android:text="Submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/b_submit"
+            android:layout_below="@+id/et_time"
+            android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+
+</RelativeLayout>
